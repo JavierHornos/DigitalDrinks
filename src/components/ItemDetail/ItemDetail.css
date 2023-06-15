@@ -1,0 +1,42 @@
+.contenedorItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #e3e1e1;
+    margin: 2rem;
+    color: black;
+    background-color: white;
+    border-radius: .75rem;
+    
+
+}
+
+.img {
+    width: 20vw;
+}
+
+.nombre {
+    background-color: white;
+    
+}
+
+.terminarCompra {
+    background-color: orangered;
+    color: white;
+    font-size: 1.2rem;
+    width: 8rem;
+    border-radius: 10px;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+.terminarCompra:hover{
+    color: orange;
+    cursor: pointer;
+}
+    
+    

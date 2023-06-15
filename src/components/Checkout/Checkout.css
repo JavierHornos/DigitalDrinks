@@ -1,0 +1,46 @@
+.formulario {
+    color: black;
+    background-color: white;
+    border-radius: .75rem;
+    margin: 1rem;
+    padding: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+
+    
+}
+
+.gracias{
+    color: white;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: .5rem;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+input,
+textarea {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+
+.imgCheckout{
+    width: 50px;
+}
+
+
+
+
+
+
