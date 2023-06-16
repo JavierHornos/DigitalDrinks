@@ -5,13 +5,14 @@ Este es un proyecto de ecommerce que se utiliza para el curso de React. La aplic
 - React
 - React Router
 - React Hook Form
+- crypto-js
 - Sweet Alert 2
 - Firebase
 
 ## Funcionalidades
 - Ver una lista de productos disponibles
-- *Registrar* un nuevo Usuario validando todos los campos y guardarlo en base de datos
-- *Loguearse* validando los datos ingresados y navegar con el usuario guardado en el localStorage
+- *Registrar* un nuevo Usuario validando todos los campos, ademas de usar Crypto-js para hashear el password y guardarlo en base de datos
+- *Loguearse* validando los datos ingresados, comparando con el hasheo del password y navegar con el usuario logueado guardado en el localStorage
 - Si estas logueado *ves links* del NavBar que cuando no estas logueado no ves
 - Pudes *desloguearte*
 - *Agregar productos* al carrito de compras
