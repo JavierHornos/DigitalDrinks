@@ -10,12 +10,12 @@ function NavBar() {
 
     const data = window.localStorage.getItem('login',)
     const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-    const [modoOscuro, setModoOscuro] = useState(false)
+    const [hamburguesa, setHamburguesa] = useState(false)
 
-    const cambiarModo = () => {
-        setModoOscuro(!modoOscuro)
+    const activarHamburguesa = () => {
+        setHamburguesa(!hamburguesa)
     }
-    const estilo = modoOscuro ? "nav visible" : "nav";
+    const estilo = hamburguesa ? "nav visible" : "nav";
 
 
     const  desloguear  = async () =>  {
@@ -33,12 +33,12 @@ function NavBar() {
         <div className="logoBoton">
         <Link to={"/"}><img className="imgLogo" src={imgLogo} alt="Digital Drinks" /></Link>
 
-        <button className="abrir-menu" onClick={cambiarModo}> <i class="bi bi-list"></i> </button>
+        <button className="abrir-menu" onClick={activarHamburguesa}> <i class="bi bi-list"></i> </button>
         </div>
 
         <nav className={estilo}>
             
-            <button className="cerrar-menu" onClick={cambiarModo}> <i class="bi bi-x-circle-fill"></i>  </button>
+            <button className="cerrar-menu" onClick={activarHamburguesa}> <i class="bi bi-x-circle-fill"></i>  </button>
 
         <nav className="categorias">
             <ul>
