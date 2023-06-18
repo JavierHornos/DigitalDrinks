@@ -15,7 +15,7 @@ export const CarritoProvider = ({children}) => {
 
 
     const agregarProducto = (item, cantidad ) => {
-        const productoExistente = carrito.find(prod => prod.item.id === item.id);
+         const productoExistente = carrito.find(prod => prod.item.id === item.id);
 
         if(!productoExistente) {
             setCarrito(prev => [...prev, {item, cantidad}]);

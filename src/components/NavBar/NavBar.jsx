@@ -15,7 +15,7 @@ function NavBar() {
     const activarHamburguesa = () => {
         setHamburguesa(!hamburguesa)
     }
-    const estilo = hamburguesa ? "nav visible" : "nav";
+    const menuHamburguesa = hamburguesa ? "nav visible" : "nav";
 
 
     const  desloguear  = async () =>  {
@@ -36,7 +36,7 @@ function NavBar() {
         <button className="abrir-menu" onClick={activarHamburguesa}> <i class="bi bi-list"></i> </button>
         </div>
 
-        <nav className={estilo}>
+        <nav className={menuHamburguesa}>
             
             <button className="cerrar-menu" onClick={activarHamburguesa}> <i class="bi bi-x-circle-fill"></i>  </button>
 

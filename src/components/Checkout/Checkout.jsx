@@ -21,6 +21,8 @@ const Checkout = () => {
     const manejadorFormulario = (e) => {
         e.preventDefault();
 
+        let pattern = /^[0-9]/
+
         if(!nombre || !apellido || !telefono || !email || !emailConfirmacion) {
             setError("Por favor complete todos los campos");
             return;
@@ -29,6 +31,16 @@ const Checkout = () => {
         if(email !== emailConfirmacion){
             setError("Los campos del email no coinciden");
             return;
+        }
+
+        if (!telefono.match(pattern)){
+            setError("en el campo Telefono deben ser numeros")
+            return;
+        }
+
+        else if (telefono.length < 8 || telefono.length > 14){
+            setError("El Telefono debe tener entre 8 y 14 numeros")
+            return
         }
 
         const orden = {
@@ -76,6 +88,7 @@ const Checkout = () => {
             setTelefono("");
             setEmail("");
             setEmailConfirmacion(""); 
+            setError("");
     }
 
     const mostrarMensaje = () => {
@@ -83,7 +96,8 @@ const Checkout = () => {
             icon: 'success',
             title: 'Compra realizada exitosamente',
             html: `<p>Su número de orden es: <b>${ordenId}<b/><p/>`,
-            footer: '<b>¡Muchas gracias por confiar en nosotros!<b/>'
+            footer: '<b>¡Muchas gracias por confiar en nosotros!<b/>',
+            timer: 1500
         }) 
              return <Navigate to="/"/>
     }

@@ -13,14 +13,17 @@ Este es un proyecto de ecommerce que se utiliza para el curso de React. La aplic
 - Ver una lista de productos disponibles
 - *Registrar* un nuevo Usuario validando todos los campos, ademas de usar Crypto-js para hashear el password y guardarlo en base de datos
 - *Loguearse* validando los datos ingresados, comparando con el hasheo del password y navegar con el usuario logueado guardado en el localStorage
-- Si estas logueado *ves links* del NavBar que cuando no estas logueado no ves
+- Si estas logueado *ves links* del NavBar que cuando no estas logueado no ves, como ver el email de quien esta logeado
 - Pudes *desloguearte*
 - *Agregar productos* al carrito de compras
 - *Ver el carrito* de compras
-- *Realizar la compra* retornando una orden de compra
+- *Realizar la compra* retornando una orden de compra, validando todos los campos del Checkout
 - *Ver mensajes con Sweet Alert 2* cada vez que agregas un producto, cuando te logueas, cuando te deslogueas y cuando te llega la orden de compra realizada
-- Se pueden *ver el stok disponible* en verde y en rojo cuando no hay stock
+- Se pueden *ver el stok disponible* en verde y en rojo cuando no hay stock, ademas de desactivar la función de agregar producto
 - Cuando vas a agregar la cantidad de productos *ves cuanto articulos te quedan a medida que vas seleccionando la cantidad*.
+- En la vista Mobile se *creó un menú hamburguesa con un hook personalizado para que se despliegue el NavBar*
+- Validamos si se ingresa un id invalido
+- Validamos si se ingresa a una categoria invalida
 
 ## Instalación
 
