@@ -22,13 +22,13 @@ const ItemListContainer = ({greeting}) => {
           })
           setProductos(nuevosProductos);
           let cat = nuevosProductos[0].idCat
-          console.log(cat)
+          //console.log(cat)
           setCate(cat)
         })
         .catch(error => console.log(error))
     },[idCategoria])
 
-    console.log(cate)
+    //console.log(cate)
      
     if(idCategoria > cate) {
       return <h2 className='titulo'>La categoria no existe</h2>

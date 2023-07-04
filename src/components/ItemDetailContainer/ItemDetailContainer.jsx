@@ -20,7 +20,7 @@ const ItemDetailContainer = () => {
             const nuevoProducto = {id: res.id, ...data}
             setProducto(nuevoProducto)
             let idProd = nuevoProducto.id
-            console.log(idProd)
+            //console.log(idProd)
             setIdProducto(idProd)
           })
           .catch(error => console.log(error))
@@ -28,7 +28,7 @@ const ItemDetailContainer = () => {
 
     useEffect( () => {
       const misProductos = query(collection(db, "DigitalDrinks"))
-      console.log(misProductos)
+      //console.log(misProductos)
 
       getDocs(misProductos)
         .then(res => {

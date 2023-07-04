@@ -1,5 +1,7 @@
-import { useState, createContext } from "react";
+import { useState, createContext, useEffect } from "react";
 import Swal from "sweetalert2";
+
+const carritoInicial = JSON.parse(localStorage.getItem("carrito")) || [];
 
 export const CarritoContext = createContext({
     carrito: [],
@@ -8,9 +10,12 @@ export const CarritoContext = createContext({
 });
 
 export const CarritoProvider = ({children}) => {
-    const [carrito, setCarrito] = useState([]);
+    const [carrito, setCarrito] = useState(carritoInicial);
     const [total, setTotal] = useState(0);
     const [cantidadTotal, setCantidadTotal] = useState(0);
+
+    
+
 
 
 
@@ -33,6 +38,9 @@ export const CarritoProvider = ({children}) => {
             setCantidadTotal(prev => prev + cantidad);
             setTotal(prev => prev + (item.precio * cantidad));
         }
+
+
+
 
         Swal.fire({
             position: 'center',
@@ -66,7 +74,9 @@ export const CarritoProvider = ({children}) => {
     }
 
     
-
+    useEffect(()=> {
+        localStorage.setItem('carrito', JSON.stringify(carrito))
+    },[carrito])
 
     return (
         <CarritoContext.Provider value={{carrito, agregarProducto, eliminarProducto, vaciarCarrito, total, cantidadTotal, cantidadEnCarrito, }} >
